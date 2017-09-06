@@ -9,9 +9,9 @@
 
 ## 项目截图
 
-![首页](http://onzbviqx3.bkt.clouddn.com/x_home.png)
-![我的](http://onzbviqx3.bkt.clouddn.com/x_mine.png)
-![商品](http://onzbviqx3.bkt.clouddn.com/x_goods.png)
-![购物车](http://onzbviqx3.bkt.clouddn.com/x_cart.png)
-![订单](http://onzbviqx3.bkt.clouddn.com/x_order.png)
+![首页](http://onzbviqx3.bkt.clouddn.com/x_home.png?imageView2/2/w/320/h/640)
+![我的](http://onzbviqx3.bkt.clouddn.com/x_mine.png?imageView2/2/w/320/h/640)
+![商品](http://onzbviqx3.bkt.clouddn.com/x_goods.png?imageView2/2/w/320/h/640)
+![购物车](http://onzbviqx3.bkt.clouddn.com/x_cart.png?imageView2/2/w/320/h/640)
+![订单](http://onzbviqx3.bkt.clouddn.com/x_order.png?imageView2/2/w/320/h/640)
 
