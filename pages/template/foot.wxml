@@ -1,0 +1,3 @@
+<template name="foot">
+    <text>我是小程序001</text>
+</template>

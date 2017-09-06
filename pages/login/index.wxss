@@ -1,0 +1,56 @@
+page{
+    height: 100%;
+}
+.container{
+    background-color: #f5f5f9;
+    justify-content: initial;
+    display:flex;
+}
+.form-box{
+    width:100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.row-wrap{
+    width: 750rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    margin-left: 30rpx;
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    font-size: 28rpx;
+    /*justify-content: space-between;*/
+}
+.row-wrap .label{
+    width: 160rpx;
+    color: #000
+}
+.row-wrap .label-right{
+    display:flex;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+.row-wrap .label-right input{
+    float:left;
+    height: 100%;
+    font-size: 28rpx;
+}
+.row-wrap .label-right button{
+    font-size: 28rpx;
+    line-height: 88rpx;
+}
+.arrow-right{
+    width: 15rpx;
+    height: 24rpx;
+}
+.save-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:30rpx;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    background-color: #e64340;
+    color:#fff;
+}

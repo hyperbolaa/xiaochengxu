@@ -1,0 +1,25 @@
+.container {
+    font-family: "Microsoft Yahei, Arial, Helvetica, sans-serif";
+    height:100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #F2f2f2
+}
+
+.no-data{
+    width: 100%;
+    bottom: 0;
+    top: 88rpx;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 203rpx;
+    background-color: #F2f2f2;
+}
+.no-data .text{
+    font-size:28rpx;
+    color:#999999;
+    text-align: center
+}

@@ -1,0 +1,475 @@
+@import "/wxParse/wxParse.wxss";
+
+.container {
+  background-color: #F2f2f2;
+  min-height: 100%;
+  padding-bottom: 100rpx;
+}
+.swiper-container{
+  width: 100%;
+  position: relative;  
+}
+.swiper_box {
+  width: 100%;
+  height:748rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height:748rpx;
+}
+.swiper-container .dots{  
+  position: absolute;  
+  left: 0;  
+  right: 0;  
+  bottom: 20rpx;  
+  display: flex;  
+  justify-content: center;  
+}  
+.swiper-container .dots .dot{  
+  margin: 0 8rpx;  
+  width: 14rpx;  
+  height: 14rpx;  
+  background: #000;  
+  border-radius: 50%;  
+  transition: all .6s;  
+  opacity: .3;
+}  
+.swiper-container .dots .dot.active{  
+  opacity: .6;
+}
+.goods-info{
+  background-color: #fff;
+  padding: 35rpx 0;
+  margin-bottom: 24rpx;
+  width: 100%;
+}
+.goods-info .goods-title{
+  box-sizing: border-box;
+  padding: 0 35rpx;
+  font-size: 32rpx;
+  line-height: 1.4;
+  color: #000;
+  margin-bottom: 28rpx;
+}
+.goods-info .goods-price{
+   box-sizing:border-box;
+   padding: 0 35rpx;
+   color:#e64340;
+   font-size: 28rpx;
+   font-weight: bold;
+}
+.row-arrow{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0  120rpx 0 35rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 102rpx;
+  font-size: 28rpx;
+  line-height: 102rpx;
+  margin-bottom: 28rpx;
+  background: #fff url(https://tdjy.kidsclubcn.com/images/arrow-right.png) no-repeat 697rpx center;
+  background-size: 18rpx auto;
+}
+.goods-des-info{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.label-title{
+  font-size:28rpx;
+  color:#000000;
+  padding: 30rpx;
+}
+.goods-text{
+  padding: 0 30rpx;
+  font-size:28rpx;
+  color:#666666;
+  line-height: 56rpx;
+  margin-bottom: 30rpx;
+}
+.des-imgs{
+  width:100%;
+}
+.des-imgs image{
+  width: 100%;
+}
+.footer-box{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  box-shadow:0 0 8rpx 0 ;
+}
+.footer-box .shop-cart-btn{
+  position: relative;
+  width: 150rpx;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  padding-top: 26rpx;
+  font-size:20rpx;
+  color:#acacb7;
+  box-sizing: border-box;
+  background:url("https://tdjy.kidsclubcn.com/images/cart.png") no-repeat center 21rpx;
+  background-size: 44rpx auto;
+}
+.footer-box .shop-cart-btn .shop-num{
+  position: absolute;
+  color:#e64340;
+  left: 80rpx;
+  top:-20rpx;
+}
+.footer-box .join-shop-cart{
+  text-align: center;
+  width: 300rpx;
+  height: 100%;
+  line-height: 100rpx;
+  background-color: #ff6850;
+  color:#fff;
+  font-size: 34rpx;
+}
+.footer-box .now-buy{
+  text-align: center;
+  height: 100%;
+  width: 300rpx;
+  line-height: 100rpx;
+  background-color: #e64340;
+  color:#fff;
+  font-size: 34rpx;
+}
+
+.footer-box .no-goods{
+  width:100%;
+  text-align: center;
+  height: 100%;
+  line-height: 100rpx;
+  background-color: silver;
+  color:#fff;
+  font-size: 34rpx;
+}
+
+.show-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  z-index: 4;
+}
+.popup-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.popup-contents{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  background-color: #fff;
+  z-index: 6;
+}
+.pop-goods-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 30rpx;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.pop-img-box{
+  width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  margin-right: 26rpx;
+}
+.pop-img-box .goods-thumbnail{
+  width: 120rpx;
+  height: 120rpx;
+}
+.pop-goods-title{
+  width: 484rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size:26rpx;
+  color:#000000;
+}
+.pop-goods-price{
+  font-size:26rpx;
+  color:#e64340;
+  margin-top:20rpx; 
+}
+.pop-goods-close{
+  width: 36rpx;
+  height: 36rpx;
+  flex: 1;
+  background:url("https://tdjy.kidsclubcn.com/images/popup-close.png") no-repeat center center;
+  background-size: 36rpx auto;
+  align-self: flex-start;
+  margin-top: -10rpx;
+}
+.size-label-box  .label{
+  font-size:26rpx;
+  color:#000;
+  padding-left: 30rpx;
+  padding: 30rpx 0 20rpx 30rpx;
+}
+.size-label-box .label-item-box{
+  display: flex;
+  margin-left: 30rpx;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+.size-label-box .label-item{
+  font-size:26rpx;
+  color:#000;
+  padding: 14rpx 20rpx;
+  border: 1px solid #ddd;
+  border-radius: 6rpx;
+  margin: 10px;
+}
+.size-label-box .label-item.active{
+  color: #e64340;
+  border: 1px solid #e64340;
+}
+.buy-num-box{
+   display: flex;
+   justify-content: space-between;
+   padding: 30rpx 30rpx 48rpx 0;
+   margin-left: 30rpx; 
+   border-top: 1px solid #eee;
+   align-items: center;
+}
+.num-label{
+  font-size:26rpx;
+  color:#000000;
+}
+.buy-num-box .num-box{
+     display: flex;
+}
+.buy-num-box .num-box .num-jian,
+.buy-num-box .num-box .num-input,
+.buy-num-box .num-box .num-jia{
+  width: 80rpx;
+  height: 64rpx;
+  line-height: 62rpx;
+  text-align: center;
+  border: 1px solid #eee;
+}
+.buy-num-box .num-box .num-input{
+  font-size: 28rpx;
+}
+.buy-num-box .num-box .num-input input{
+  height: 100%;
+}
+.popup-join-btn{
+  width: 100%;
+  height: 89rpx;
+  text-align: center;
+  line-height: 89rpx;
+  font-size:34rpx;
+  color:#ffffff;
+  background-color: #e64340;
+}
+
+.popup-no-goods-btn{
+  width: 100%;
+  height: 89rpx;
+  text-align: center;
+  line-height: 89rpx;
+  font-size:34rpx;
+  color:#ffffff;
+  background-color: silver;
+}
+
+.buy-num-box .num-box .hui{
+  background-color: #f5f5f9;
+}
+
+.wxParse{
+    margin: 0 5px;
+    font-family: Helvetica,sans-serif;
+    font-size: 28rpx;
+    color: #666;
+    line-height: 1.8;
+}
+view{
+    word-break:break-all; overflow:auto;
+}
+.wxParse-inline{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+/*//标题 */
+.wxParse-div{margin: 0;padding: 0;}
+.wxParse-h1{ font-size:2em; margin: .67em 0 }
+.wxParse-h2{ font-size:1.5em; margin: .75em 0 }
+.wxParse-h3{ font-size:1.17em; margin: .83em 0 }
+.wxParse-h4{ margin: 1.12em 0}
+.wxParse-h5 { font-size:.83em; margin: 1.5em 0 }
+.wxParse-h6{ font-size:.75em; margin: 1.67em 0 }
+
+.wxParse-h1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: .9em;
+}
+.wxParse-h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: .34em;
+}
+.wxParse-h3 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: .34em;
+}
+.wxParse-h4 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: .24em;
+}
+.wxParse-h5 {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: .14em;
+}
+.wxParse-h6 {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: .04em;
+}
+
+.wxParse-h1, .wxParse-h2, .wxParse-h3, .wxParse-h4, .wxParse-h5, .wxParse-h6, .wxParse-b, .wxParse-strong  { font-weight: bolder }
+
+.wxParse-i,.wxParse-cite,.wxParse-em,.wxParse-var,.wxParse-address{font-style:italic}
+.wxParse-pre,.wxParse-tt,.wxParse-code,.wxParse-kbd,.wxParse-samp{font-family:monospace}
+.wxParse-pre{white-space:pre}
+.wxParse-big{font-size:1.17em}
+.wxParse-small,.wxParse-sub,.wxParse-sup{font-size:.83em}
+.wxParse-sub{vertical-align:sub}
+.wxParse-sup{vertical-align:super}
+.wxParse-s,.wxParse-strike,.wxParse-del{text-decoration:line-through}
+/*wxparse-自定义个性化的css样式*/
+/*增加video的css样式*/
+.wxParse-strong,.wxParse-s{display: inline}
+.wxParse-a{
+    color: deepskyblue;
+    word-break:break-all;
+    overflow:auto;
+}
+
+.wxParse-video{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.wxParse-video-video{
+    width:100%;
+}
+
+.wxParse-img{
+    background-color: #efefef;
+    overflow: hidden;
+}
+
+.wxParse-blockquote {
+    margin: 0;
+    padding:10px 0 10px 5px;
+    font-family:Courier, Calibri,"宋体";
+    background:#f5f5f5;
+    border-left: 3px solid #dbdbdb;
+}
+
+.wxParse-code,.wxParse-wxxxcode-style{
+    display: inline;
+    background:#f5f5f5;
+}
+.wxParse-ul{
+    margin: 20rpx 10rpx;
+}
+
+.wxParse-li,.wxParse-li-inner{
+    display: flex;
+    align-items: baseline;
+    margin: 10rpx 0;
+}
+.wxParse-li-text{
+    
+    align-items: center;
+    line-height: 20px;
+}
+
+.wxParse-li-circle{
+    display: inline-flex;
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+    margin-right: 5px;
+}
+
+.wxParse-li-square{
+    display: inline-flex;
+    width: 10rpx;
+    height: 10rpx;
+    background-color: #333;
+    margin-right: 5px;
+}
+.wxParse-li-ring{
+    display: inline-flex;
+    width: 10rpx;
+    height: 10rpx;
+    border: 2rpx solid #333;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 5px;
+}
+
+.wxParse-u {
+  text-decoration: underline;
+}
+.wxParse-hide{
+    display: none;
+}
+.WxEmojiView{
+    align-items: center;
+}
+.wxEmoji{
+    width: 16px;
+    height:16px;
+}
+.wxParse-tr{
+	display: flex;
+	border-right:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+	border-top:1px solid #e0e0e0;
+}
+.wxParse-th,
+.wxParse-td{
+	flex:1;
+	padding:5px;
+	font-size:28rpx;
+	border-left:1px solid #e0e0e0;
+	word-break: break-all;
+}
+.wxParse-td:last{
+	border-top:1px solid #e0e0e0;
+}
+.wxParse-th{
+	background:#f0f0f0;
+	border-top:1px solid #e0e0e0;
+}

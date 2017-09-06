@@ -1,0 +1,88 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="container">
+   <view class="swiper-container">
+        <swiper class="swiper_box"  indicator-dots="{{dots}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{goodsDetail.pics}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" width="300" height="300"/>
+                </swiper-item>
+            </block>
+        </swiper>
+   </view>
+   <view class="goods-info">
+        <view class="goods-title">{{goodsDetail.name}}</view>
+        <view class="goods-price">¥ {{goodsDetail.price}}</view>
+   </view>
+   <view class="row-arrow" bindtap="tapSpec">
+      {{selectSize}}
+   </view>
+    <view class="goods-des-info">
+        <view class="label-title">商品介绍</view>
+        <view class="goods-text">
+             <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+         </view>
+    </view>
+    <view class="footer-box">
+        <view class="shop-cart-btn" bindtap="toCart">
+            <view class="shop-num">({{shopNum}})</view>
+            购物车
+        </view>
+        <block wx:if="{{goodsDetail.status == 1}}">
+            <view class="join-shop-cart" bindtap="tapAddCart" data-flag="false">加入购物车</view>
+            <view class="now-buy" bindtap="tobuy" data-flag="false">立即购买</view>
+        </block>
+        <block wx:else>
+            <view class="no-goods">商品已下架</view>
+        </block>
+    </view>
+    <view class="show-popup" hidden="{{hideShopPopup}}" >
+        <view class="popup-mask" bindtap="closePopupTap"></view>
+        <view class="popup-contents">
+             <view class="pop-goods-info">
+                <view class="pop-img-box">
+                    <image src="{{goodsDetail.pic}}" class="goods-thumbnail"/>
+                </view>
+                <view class="pop-goods-des">
+                    <view class="pop-goods-title">{{goodsDetail.name}}</view>
+                    <view class="pop-goods-price">¥ {{selectSizePrice}}</view>
+                </view>
+                <view class="pop-goods-close" bindtap="tapClose"></view>
+             </view>
+             <view class="size-label-box">
+                <view class="label-item-box">
+                    <view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{goodsDetail.specs}}"
+                     bindtap="tapItem"
+                     data-specindex="{{index}}"
+                     data-specid="{{item.id}}"
+                     data-specname="{{item.name}}">
+                        {{item.name}}
+                    </view>
+                </view>
+             </view> 
+             <view class="buy-num-box">
+                <view class="num-label">购买数量</view>
+                <view class="num-box">
+                    <view class="num-jian {{buyNumber == buyNumMin ? 'hui': ''}}" bindtap="tapJian">-</view>
+                    <view class="num-input">
+                       <input  type="number" value="{{buyNumber}}" disabled/>
+                    </view>
+                    <view class="num-jia {{buyNumber== buyNumMax ? 'hui': ''}}" bindtap="tapJia">+</view>
+                </view>
+             </view>  
+
+             <block wx:if="{{goodsDetail.status == 1}}">
+                 <view class="popup-join-btn" bindtap="tapAddCart" data-flag="true">
+                    加入购物车
+                 </view>
+             </block>
+             <block wx:else>
+                 <view class="popup-no-goods-btn">
+                    商品已下架
+                 </view>
+             </block>
+
+
+        </view>
+    </view>
+</view>

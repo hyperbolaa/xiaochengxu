@@ -1,0 +1,55 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+    <view class="page__hd">
+        <view class="header_left">
+          <image src="{{shop.logo}}"></image>
+        </view>
+        <view class="header_right">
+          <view class="title">
+            <text>{{shop.name}}</text>
+          </view>
+        </view>
+    </view>
+
+    <view class="info_list">
+        <view class="weui_cell" bindtap="location" data-latitude="{{shop.latitude}}" data-longitude="{{shop.longitude}}">
+            <view class="weui_cell_hd"><image src="../../images/address.png"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{shop.address}} </view>
+            </view>
+            <view class="with_arrow"></view>
+        </view>
+        <block wx:if="{{shop.phone}}">
+            <view class="weui_cell" bindtap="phoneCall" data-phone="{{shop.phone}}">
+                <view class="weui_cell_hd"><image src="../../images/kefu.png"></image></view>
+                <view class="weui_cell_bd">
+                    <view class="weui_cell_bd_p"> {{shop.phone}} </view>
+                </view>
+                <view class="with_arrow"></view>
+            </view>
+        </block>
+    </view>
+
+    <block wx:if="{{goods.length > 0}}">
+        <view class="section">
+            <block wx:for="{{goods}}">
+                <view class="goods-item">
+                    <navigator url="../goods/detail/index?id={{item.id}}" open-type="redirect">
+                        <image src="{{item.img}}" class="pic"></image>
+                        <view class="right_cont">
+                            <text class="name">{{item.name}}</text>
+                            <text class="price">￥{{item.price}}元 / 起</text>
+                        </view>
+                    </navigator>
+                </view>
+            </block>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="course">
+              <view class="text">
+                   <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+              </view>
+        </view>
+    </block>
+</view>

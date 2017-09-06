@@ -1,0 +1,68 @@
+page{
+  height: 100%;
+}
+.container{
+    height:100%;
+}
+
+.goods-info{
+    width: 100%;
+    background-color: #fff;
+}
+.goods-info .row-box{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 24rpx 30rpx 12rpx 30rpx;
+    font-size: 28rpx;
+    color: #000;
+    border-bottom:1px solid #ddd;
+}
+.goods-info .row-box .right-text{
+    text-align: right;
+    margin-left:40px;
+}
+
+
+.goods-list{
+    width:100%;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+.goods-list .list-title{
+    font-size: 28rpx;
+    color: #000;
+    padding: 30rpx 0 25rpx 30rpx;
+    text-align:center;
+    line-height:30rpx;
+}
+.goods-list  .a-goods{
+    border-top: 1px solid #eee;
+    padding: 30rpx;
+}
+.goods-list  .a-goods .img-box{
+    overflow: hidden;
+    background-color: #FFF;
+    text-align:center;
+}
+.goods-list .img-box .img{
+    width: 400rpx;
+    height:400rpx;
+}
+.goods-list  .img-box .code{
+    font-weight: bold;
+}
+
+.goods-remark{
+    width:100%;
+    background-color: #fff;
+    font-size:28rpx;
+}
+.goods-remark .text{
+    line-height:50rpx;
+    padding:10rpx;
+}
+
+

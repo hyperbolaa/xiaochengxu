@@ -1,0 +1,29 @@
+<view class="container">
+    <scroll-view scroll-y="true" bindscrolltolower="scrollToBottom"  style="height: 600px;">
+        <block wx:if="{{shops.length > 0}}">
+            <view class="section section-big nearby">
+                <view class="shop" wx:for="{{shops}}" wx:key="id">
+                    <navigator url="../shop/index?id={{item.id}}" style="width: 100%; height: 100%">
+                        <view class='shop-container'>
+                            <view class='shop-logo'><image src="{{item.logo}}"/></view>
+                            <view class='shop-detail'>
+                                <view class="shop-top">
+                                    <view class='shop-name'>{{item.name}}</view>
+                                    <view class='shop-distance'>{{item.distance}}</view>
+                                </view>
+                                <view class='shop-data'>
+                                    <view class='start-price'>{{item.desp}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="no-data">
+                  <view class="text">暂无数据</view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

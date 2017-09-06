@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="goods-info">
+        <view class="row-box">
+            <view class="row-label">机构</view>
+            <view class="right-text">{{orderDetail.orderInfo.shopName}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">商品</view>
+            <view class="right-text">{{orderDetail.orderInfo.goodsName}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">课程</view>
+            <view class="right-text">{{orderDetail.orderInfo.specName}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">时间</view>
+            <view class="right-text">{{orderDetail.orderInfo.goodsTime}}</view>
+        </view>
+    </view>
+
+    <view class="goods-list">
+        <view class="a-goods" wx:for-items="{{orderDetail.codes}}" wx:key="{{index}}">
+            <view class="img-box">
+                <image class="img" src="{{item.pic}}"  />
+                <view class="code">{{item.code}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="goods-remark">
+        <view class="text">技术交流请加群:60973229</view>
+    </view>
+</view>

@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="info_list">
+         <navigator  url="../cart/index">
+          <view class="weui_cell">
+              <view class="weui_cell_hd"><image src="../../images/icon-cart.png"></image></view>
+              <view class="weui_cell_bd">
+                  <view class="weui_cell_bd_p"> 购物车 </view>
+              </view>
+              <view class="badge">{{shopNum}}</view>
+              <view class="with_arrow"></view>
+          </view>
+        </navigator>
+
+        <block wx:if="{{user.phone}}">
+            <navigator  url="../order/list/index">
+              <view class="weui_cell" bindtap="tapOrder">
+                  <view class="weui_cell_hd"><image src="../../images/icon-order.png"></image></view>
+                  <view class="weui_cell_bd">
+                      <view class="weui_cell_bd_p"> 我的订单 </view>
+                  </view>
+                  <view class="with_arrow"></view>
+              </view>
+            </navigator>
+
+            <view class="weui_cell_login" bindtap="logout">
+                <view class="login_p"> 退出 </view>
+            </view>
+        </block>
+
+        <block wx:if="{{!user.phone}}">
+            <view class="weui_cell_login" bindtap="login">
+                <view class="login_p"> 登录 </view>
+            </view>
+        </block>
+  </view>
+</view>
